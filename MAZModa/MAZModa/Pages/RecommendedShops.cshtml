@@ -1,0 +1,110 @@
+﻿@page "{StyleId:int}"
+
+@model MAZModa.Pages.RecommendedShopsModel
+@{
+    ViewData["Title"] = "RecommendedShops";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@*<div>
+    <img src="~/img/bg/shop-bg.jpg" />
+</div>
+<h5>You can find your style in ..</h5>*@
+<section class="page-top-section set-bg" data-setbg="/img/bg/shop-bg.jpg">
+    <div class="hero-social-warp">
+        <p>Follow us on Social MEdia</p>
+        <div class="hero-social-links">
+            <a href="#"><i class="fa fa-behance"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<div class="section-title text-center">
+    <span style="font-size:25px">You can find your style in ..</</span>
+</div>
+@*@foreach (var item in Model.RecommendedShopsList)
+    {
+        <h3>@item.Name</h3>
+        <div class="feature-favourite">
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> @Html.DisplayFor(modelItem => item.Location)</p>
+        </div>
+    }*@
+
+<section class="dorne-listing-destinations-area section-padding-100-50" @*style="background-image: url(https://0i.is/lRz1); background-size: cover; background-repeat: no-repeat"*@>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in Model.RecommendedShopsList)
+                {
+
+                    <!-- Single Features Area -->
+                    <div class="col-4 col-sm-6 col-lg-4">
+
+                        <div class="single-features-area mb-50">
+
+                            @*<img src="~/img/uploads/@item.Image" alt="@item.Name">*@
+                            <!-- Rating & Map Area -->
+                            <div class="ratings-map-area d-flex">
+                                @*<a href="#"> @Html.DisplayFor(modelItem => item.Category.Name)</a>*@
+                                <a href="#" data-toggle="modal" data-target="#myModal_@item.Id"><img src="~/img/hero-3.jpg" alt="@item.Name Location" title="@item.Name location"></a>
+                            </div>
+                            <div class="feature-content d-flex align-items-center justify-content-between">
+                                <div class="feature-title">
+                                    <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+
+                                    @*@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                                        {
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" })
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+
+                                        }*@
+                                </div>
+                                <div class="feature-favourite">
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>@Html.DisplayFor(modelItem => item.Name)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal_@item.Id">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div style="height:50px"></div>
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title"> @Html.DisplayFor(modelItem => item.Name) </h4>
+                                    <button type="button" class="close" data-dismiss="modal" data-target="#myModal_@item.Id">&times;</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    @if (@item.Location != null && item.Location != "")
+                                    {
+                                        <iframe src="@item.Location" width="470" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                                    }
+                                    else
+                                    {
+                                        <p>Sorry, There is no map location available for this place right now</p>
+                                    }
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-target="#myModal_@item.Id">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />

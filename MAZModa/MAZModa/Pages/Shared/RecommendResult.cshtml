@@ -1,0 +1,64 @@
+﻿@page "{StyleId:int}"
+
+@model MAZModa.Pages.Shared.RecommendResultModel
+@{
+    ViewData["Title"] = "RecommendResult";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+    <section class="page-top-section set-bg" data-setbg="/img/bg/result-bg.jpg">
+        <div class="hero-social-warp">
+            <p>Follow us on Social MEdia</p>
+            <div class="hero-social-links">
+                <a href="#"><i class="fa fa-behance"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+    </section>
+<br />
+
+
+<!-- Award section -->
+<section class="award-section spad">
+    <div class="container">
+        <div class="section-title text-center">
+            <span>Find all you need here,</span>
+            <h2>@Model.context.Style.Where(s=>s.Id==Model.StyleId).Select(s=>s.StyleDescription).FirstOrDefault()</h2>
+        </div>
+
+        <div class="award-slider owl-carousel">
+            @foreach (var item in Model.context.Photo.Where(ph => ph.StyleId == Model.StyleId).ToList())
+            {
+                <div class="award-box" style="height:500px">
+                    @*<div class="award-year">2011</div>
+                    <h4>Fashion AWARDS</h4>
+                    <p>Suspendisse rhoncus turpis sed viverra molestie</p>*@
+                    <img src="~/img/Styles/@item.PhotoPath" height="100%"/>
+                </div>
+            }
+        </div>
+        <br /><br />
+        <div >
+            <div>
+                <span class="col-12">
+                    <a asp-page="/AllTailors">
+                        <button class="btn btn-dark" style="width:100%">Recommend Me Tailor</button>
+                    </a>
+                </span>
+            </div>
+            <br />
+            <div>
+                <span class="col-12">
+                    <a href="/RecommendedShops/@Model.StyleId">
+                        <button type="submit" class="btn btn-dark" style="width:100%">Recommend Me Shops</button>
+                    </a>
+                </span>
+            </div>
+    </div>
+    </div>
+</section>
+<!-- Award section end-->

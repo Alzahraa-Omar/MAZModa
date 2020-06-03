@@ -1,0 +1,133 @@
+﻿@page
+@model MAZModa.Pages.AddStyleModel
+@{
+    ViewData["Title"] = "AddStyle";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+}
+
+
+
+<section class="page-top-section set-bg" data-setbg="img/bg/addStyle-bg.jpg">
+<h2>Styles</h2>
+<div class="hero-social-warp">
+<p>Follow us on Social MEdia</p>
+<div class="hero-social-links">
+    <a href = "#" ><i class="fa fa-behance"></i></a>
+    <a href = "#" ><i class="fa fa-dribbble"></i></a>
+    <a href = "#" ><i class="fa fa-twitter"></i></a>
+    <a href = "#" ><i class="fa fa-facebook"></i></a>
+    <a href = "#" ><i class="fa fa-pinterest"></i></a>
+</div>
+</div>
+</section>
+
+<section class="blog-page">
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="blog-item">
+            <div class="blog-thumb set-bg" data-setbg="img/new2.jpg">
+                <div class="blog-date">
+                    <h2>25</h2>
+                    <p>May</p>
+                </div>
+            </div>
+            <div class="blog-head bh-sm">
+                <div class="blog-tags">fashion, event, lifestyle</div>
+                <h2><a href="/News">New York Fashion Week</a></h2>
+            </div>
+            <p>New York Fashion Week, held in May and September of each year, is a semi-annual series of events when international fashion collections are shown to buyers, the press, and the general public.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <form name = "data" id="data" submit="AddStyles" method="post" data-ajax="true" data-ajax-method="post" data-ajax-complete="completed" enctype="multipart/form-data">
+
+            @Html.Label("Add a description for the style")
+            <input class="form-control" palceholder="Description for style" name="_Description" />
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_GenderId">
+                <option id = "gender" selected>Select Gender</option>
+
+                  @foreach (var item in Model.context.Gender)
+{
+                    <option value = "@item.Id" > @item.Name </option >
+                  }
+            </select>
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_CategoryId">
+                <option id = "category" selected>Select Category</option>
+
+                  @foreach (var item in Model.context.Category)
+{
+                    <option value = "@item.Id" > @item.Name </option >
+                  }
+            </select>
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_DressCodeId">
+                <option id = "dressCode" selected>Select Dress Code</option>
+                  @foreach(var item in Model.context.DressCode)
+{
+                    <option value = "@item.Id" > @item.Name </option >
+                  }
+            </select>
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_AgeId">
+                <option id = "age" selected>Choose Age Range</option>
+                  @foreach(var item in Model.context.Age)
+{
+                    <option value = "@item.Id" > @item.BetweenAge </option >
+                  }
+            </select>
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_WeihgtId">
+                <option id = "weight" selected>Choose Weight Range</option>
+                  @foreach(var item in Model.context.Weights)
+{
+                    <option value = "@item.Id" > @item.BetweenWeight </option >
+                  }
+            </select>
+            <br />
+            <select class="form-group custom-select custom-select-sm" name="_HeightId">
+                <option id = "height" selected>Choose Height Range</option>
+                  @foreach(var item in Model.context.Heights)
+{
+                    <option value = "@item.Id" > @item.BetweenHeight </option>
+                  }
+            </select>
+            <br />
+
+            <div class="custom-file">
+                <lable>Upload a picture for the style</lable>
+                <input id = "pic" name= "pic" type= "file" class="form-control" />
+            </div>
+
+            <br /><br />
+                  <div style = "text-align:center" ><button type="submit" class="btn btn-dark" style="width:100%">Add New Style</button></div>
+        </form>
+    </div>
+</div>
+</div>
+</section>
+
+@*<form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Upload Image </legend>
+            <label for="Image">Image</label>
+            <input type="file" name="Image" />
+            <br />
+            <input type="submit" value="Upload" />
+        </fieldset>
+    </form>
+    <h1>Uploaded Image</h1>
+    @if (imagePath != "")
+    {
+        <div class="result">
+            <img src="@imagePath" alt="image" />
+
+        </div>
+    }*@
+

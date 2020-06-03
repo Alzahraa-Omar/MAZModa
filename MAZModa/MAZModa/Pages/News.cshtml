@@ -1,0 +1,146 @@
+﻿@page
+@model MAZModa.Pages.NewsModel
+@{
+    ViewData["Title"] = "News";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <img src="~/img/bg/news-bg.jpg" height="600px" width="100%"/>
+        <div>
+            <div class="hero-social-warp">
+                <p>Follow us on Social MEdia</p>
+                <div class="hero-social-links">
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<!-- Page top section -->
+@*<section class="page-top-section set-bg" data-setbg="~/img/bg/news-bg.jpg">
+    
+    <h2>News</h2>
+    
+</section>*@
+<!-- Page top section end-->
+<!-- Single Blog page -->
+<section class="page-warp single-blog-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-item">
+                    <div class="blog-thumb set-bg" data-setbg="img/notes/@Model.context.Note.Where(n=>n.Id==Model.CurrentNoteId).Select(n=>n.PhotoPath).FirstOrDefault()">
+                        <div class="blog-date">
+                            <h2>20</h2>
+                            <p>Jan</p>
+                        </div>
+                    </div>
+                    <div class="blog-head">
+                        <div class="blog-tags">fashion, event, lifestyle</div>
+                        <h2>@Model.context.Note.Where(n => n.Id == Model.CurrentNoteId).Select(n => n.Title).FirstOrDefault()</h2>
+                    </div>
+                    <p>@Model.context.Note.Where(n=>n.Id==Model.CurrentNoteId).Select(n=>n.Describtion).FirstOrDefault()</p>
+
+                    <p>
+                        n the 21st century the style trends of the fashion industry dominate the world more than they ever did, and control not only the way people dress but also trends in home ware design, makeup fashion and people’s overall attitudes. In the 60s flower power did not only mean flares and tunics, it summed up the whole attitude of a generation, and this is even more prominent today.
+
+                        Nowadays, fashion is bold and daring, and this reflects a noughties generation that is not afraid to say what they think, or wear what they want. Fashion is not just a means of clothing your body, it is the essence of your personality and beliefs, and designers are well aware of the power they hold. Designers’ predictions and designs for the coming season are more hotly anticipated than any other revelation in the world.
+
+                        Trends in fashion unify women and men around the world, yet they still allow people the ability to portray their own individual style at the same time. A period of time portrayed in a picture can be identified immedia.
+                    </p>
+
+                    <blockquote>
+                        New York Fashion Week, held in February and September of each year, is a semi-annual series of events when international fashion collections are shown to buyers, the press, and the general public.
+                    </blockquote>
+                    <p>
+                        Fashion is a term which means ‘an ongoing trend ‘. It refers to how people dress and what kind of external getup most people think is making them look stylish, up-to-date and sophisticated. While etiquettes and manner also somehow comes into the count but it comparatively more superficial and dynamic. It changes with winds of time very fast. This can be seen from the vast difference between how people used to dress before and now. Films are the mirror to the society. And therefore is comparison is seen live by comparing how the actors used to dress before and now.
+                    </p>
+                </div>
+                
+
+            </div>
+            <div class="col-lg-4 sidebar">
+                <!-- widget -->
+                @if (User.IsInRole("Admin"))
+                {
+                    <div class="sb-widget">
+                        <form class="search-widget" method="post">
+                            <input type="hidden" name="_noteId" value="@Model.CurrentNoteId" />
+                            <button type="submit" class="site-btn sb-dark">Get News<i class="fa fa-angle-double-right"></i></button>
+                        </form>
+                    </div>
+                }
+
+
+                <!-- widget -->
+                <div class="sb-widget">
+                    <h2 class="sb-title">Latest Tips</h2>
+                    <div class="populer-post">
+                        <div class="pp-item">
+                            <img src="img/blog/populer-post/1.jpg" alt="">
+                            <div class="pp-text">
+                                <div class="pp-meta">
+                                    <span>25 may 2020</span> <span>|</span> <span>In Fashion</span>
+                                </div>
+                                <h5>Our Fashion app is out now</h5>
+                            </div>
+                        </div>
+                        <div class="pp-item">
+                            <img src="img/blog/populer-post/2.jpg" alt="">
+                            <div class="pp-text">
+                                <div class="pp-meta">
+                                    <span>18 may 2020</span> <span>|</span> <span>In Fashion</span>
+                                </div>
+                                <h5>Color of the year anounced</h5>
+                            </div>
+                        </div>
+                        <div class="pp-item">
+                            <img src="img/blog/populer-post/3.jpg" alt="">
+                            <div class="pp-text">
+                                <div class="pp-meta">
+                                    <span>11 may 2020</span> <span>|</span> <span>In Fashion</span>
+                                </div>
+                                <h5>10 tips to have a stilish outfit</h5>
+                            </div>
+                        </div>
+                        <div class="pp-item">
+                            <img src="img/blog/populer-post/4.jpg" alt="">
+                            <div class="pp-text">
+                                <div class="pp-meta">
+                                    <span>3 may 2020</span> <span>|</span> <span>In Fashion</span>
+                                </div>
+                                <h5>How to wear jeans</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget -->
+                <div class="sb-widget">
+                    <div class="categories-widget">
+                        <h2 class="sb-title">Categories</h2>
+                        <ul>
+                            <li><a href="#">Outfits</a></li>
+                            <li><a href="#">Dress</a></li>
+                            <li><a href="#">Hijab</a></li>
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Pants</a></li>
+                            <li><a href="#">Skirts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sb-widget">
+                    <a href="#" class="add">
+                        <img src="img/add.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Single Blog page end-->

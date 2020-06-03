@@ -1,0 +1,25 @@
+﻿@page
+@model MAZModa.Pages.AllShopsModel
+@{
+    ViewData["Title"] = "AllShops";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>AllShops</h1>
+
+<div class="card col-lg-4">
+    @foreach (var item in Model.context.Shop)
+    {
+        <div class="card-header">
+            <h3>@item.Name</h3>
+        </div>
+        <div class="card-body">
+            <img src="~/img/portfolio/12.jpg" />
+        </div>
+        <div class="card-footer">
+            @Html.DisplayNameFor(model => model.shop.Location)
+            @Html.DisplayFor(model => model.shop.Location)
+        </div>
+        <br />
+    }
+</div>

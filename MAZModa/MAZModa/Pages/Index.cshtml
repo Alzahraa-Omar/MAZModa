@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="container-fluid">
+        <section class="hero-section">
+            <div class="hero-slider owl-carousel">
+                <div class="hs-item set-bg" data-setbg="img/slider/1.jpg" data-hash="slide-1"> </div>
+                <div class="hs-item set-bg" data-setbg="img/slider/2.jpg" data-hash="slide-2"> </div>
+                <div class="hs-item set-bg" data-setbg="img/slider/3.jpg" data-hash="slide-3"> </div>
+                <div class="hs-item set-bg" data-setbg="img/slider/4.jpg" data-hash="slide-4"> </div>
+
+            </div>
+
+        </section>
+    </div>
+<!-- Hero section end-->
+<!-- Intro section -->
+<section class="intro-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="~/img/1.jpg" alt="">
+            </div>
+            <div class="col-lg-7 intro-text">
+                <span></span>
+                <h2 style="color: #ff006c;">Be Stylish .. Find your Best Outfit</h2>
+                <h4> Here we go  </h4><br />
+                <a   asp-page="/RecommendStyle" class="btn btn-outline-danger" >Recomendation </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Intro section end-->
+<!-- Portfolio section -->
+<section class="portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <a asp-page="ShowStyle" asp-route-ID="1" class="portfolio-item">
+                    <img src="~/img/portfolio/1.jpg" alt="">
+                    <h4> See More  </h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a asp-page="ShowStyle" asp-route-ID="2" class="portfolio-item">
+                    <img src="~/img/portfolio/2.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a asp-page="ShowStyle" asp-route-ID="3" class="portfolio-item">
+                    <img src="~/img/portfolio/3.jpg"  alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a asp-page="ShowStyle" asp-route-ID="3" class="portfolio-item">
+                    <img src="~/img/portfolio/4.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="5" class="portfolio-item">
+                    <img src="~/img/portfolio/5.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="6" class="portfolio-item">
+                    <img src="~/img/portfolio/6.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="7" class="portfolio-item">
+                    <img src="~/img/portfolio/7.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="8" class="portfolio-item">
+                    <img src="~/img/portfolio/8.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="9" class="portfolio-item">
+                    <img src="~/img/portfolio/9.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="10" class="portfolio-item">
+                    <img src="~/img/portfolio/10.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a asp-page="ShowStyle" asp-route-ID="11" class="portfolio-item">
+                    <img src="~/img/portfolio/11.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a asp-page="ShowStyle" asp-route-ID="12" class="portfolio-item">
+                    <img src="~/img/portfolio/9.jpg" alt="">
+                    <h4>See More</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio section end-->
+<!-- Back to top -->
+

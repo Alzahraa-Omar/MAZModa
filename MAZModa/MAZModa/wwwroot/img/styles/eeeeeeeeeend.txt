@@ -1,0 +1,304 @@
+insert into [dbo].[Photo]
+values ('20p.jpg',2)
+------------------------
+insert into [dbo].[Photo]
+values ('21p.jpg',2)
+------------------------
+insert into [dbo].[Photo]
+values ('22p.jpg',2)
+------------------------
+insert into [dbo].[Photo]
+values ('23p.jpg',2)
+------------------------
+insert into [dbo].[Photo]
+values ('24p.jpg',3)
+------------------------
+insert into [dbo].[Photo]
+values ('25p.jpg',3)
+------------------------
+insert into [dbo].[Photo]
+values ('26p.jpg',3)
+------------------------
+insert into [dbo].[Photo]
+values ('27p.jpg',4)
+------------------------
+insert into [dbo].[Photo]
+values ('28p.jpg',4)
+------------------------
+insert into [dbo].[Photo]
+values ('29p.jpg',4)
+------------------------
+insert into [dbo].[Photo]
+values ('30p.jpg',4)
+------------------------
+insert into [dbo].[Photo]
+values ('31p.jpg',7)
+------------------------
+insert into [dbo].[Photo]
+values ('31p.jpg',7)
+------------------------
+insert into [dbo].[Photo]
+values ('80s.jpg',12)
+------------------------
+insert into [dbo].[Photo]
+values ('81s.jpg',12)
+------------------------
+insert into [dbo].[Photo]
+values ('82s.jpg',12)
+------------------------
+insert into [dbo].[Photo]
+values ('83s.jpg',13)
+------------------------
+insert into [dbo].[Photo]
+values ('84s.jpg',13)
+------------------------
+insert into [dbo].[Photo]
+values ('85s.jpg',13)
+------------------------
+insert into [dbo].[Photo]
+values ('50b.jpg',15)
+----------------------
+insert into [dbo].[Photo]
+values ('51b.jpg',15)
+----------------------
+insert into [dbo].[Photo]
+values ('52b.jpg',15)
+-----------------------
+insert into [dbo].[Photo]
+values ('53b.jpg',16)
+----------------------
+insert into [dbo].[Photo]
+values ('54b.jpg',16)
+----------------------
+insert into [dbo].[Photo]
+values ('55b.jpg',17)
+----------------------
+insert into [dbo].[Photo]
+values ('56b.jpg',17)
+----------------------
+insert into [dbo].[Photo]
+values ('57b.jpg',17)
+----------------------
+insert into [dbo].[Photo]
+values ('58b.jpg',19)
+----------------------
+insert into [dbo].[Photo]
+values ('59b.jpg',19)
+----------------------
+insert into [dbo].[Photo]
+values ('60b.jpg',19)
+----------------------
+insert into [dbo].[Photo]
+values ('30d.jpg',26)
+----------------------
+insert into [dbo].[Photo]
+values ('31d.jpg',26)
+----------------------
+insert into [dbo].[Photo]
+values ('32d.jpg',26)
+----------------------
+insert into [dbo].[Photo]
+values ('33d.jpg',26)
+----------------------
+insert into [dbo].[Photo]
+values ('34d.jpg',29)
+----------------------
+insert into [dbo].[Photo]
+values ('35d.jpg',29)
+----------------------
+insert into [dbo].[Photo]
+values ('36d.jpg',32)
+----------------------
+insert into [dbo].[Photo]
+values ('37d.jpg',32)
+----------------------
+insert into [dbo].[Photo]
+values ('38d.jpg',32)
+----------------------
+insert into [dbo].[Photo]
+values ('39d.jpg',33)
+----------------------
+insert into [dbo].[Photo]
+values ('40d.jpg',33)
+----------------------
+insert into [dbo].[Photo]
+values ('41d.jpg',33)
+----------------------
+insert into [dbo].[Photo]
+values ('40f.jpg',34)
+------------------------
+insert into [dbo].[Photo]
+values ('41f.jpg',34)
+------------------------
+insert into [dbo].[Photo]
+values ('42f.jpg',35)
+------------------------
+insert into [dbo].[Photo
+values ('43f.jpg',37)
+-----------------------
+insert into [dbo].[Photo]//4
+values ('50f.jpg',38)
+------------------------
+insert into [dbo].[Photo]
+values ('44f.jpg',35)
+------------------------
+insert into [dbo].[Photo]
+values ('45f.jpg',37)
+-----------------------
+insert into [dbo].[Photo]
+values ('51f.jpg',37)
+-----------------------
+insert into [dbo].[Photo]
+values ('46f.jpg',38)
+------------------------
+insert into [dbo].[Photo]
+values ('47f.jpg',38)
+-------------------------
+insert into [dbo].[Photo]
+values ('48f.jpg',38)
+---------------------
+insert into [dbo].[Photo]
+values ('49f.jpg',38)
+-----------------------
+insert into [dbo].[Photo]
+values ('40sp.jpg',40)
+------------------------
+insert into [dbo].[Photo]
+values ('41sp.jpg',40)
+------------------------
+insert into [dbo].[Photo]
+values ('42sp.jpg',40)
+------------------------
+insert into [dbo].[Photo]
+values ('43sp.jpg',43)
+------------------------
+insert into [dbo].[Photo]
+values ('44sp.jpg',43)
+------------------------
+insert into [dbo].[Photo]
+values ('45sp.jpg',43)
+------------------------
+insert into [dbo].[Photo]
+values ('46sp.jpg',44)
+------------------------
+insert into [dbo].[Photo]
+values ('47sp.jpg',44)
+------------------------
+insert into [dbo].[Photo]
+values ('48sp.jpg',44)
+------------------------
+insert into [dbo].[Photo]
+values ('49sp.jpg',45)
+------------------------
+insert into [dbo].[Photo]
+values ('50sp.jpg',45)
+------------------------
+insert into [dbo].[Photo]
+values ('51sp.jpg',45)
+------------------------
+insert into [dbo].[Photo]
+values ('52sp.jpg',45)
+------------------------
+insert into [dbo].[Photo]
+values ('80so.jpg',48)
+----------------------
+insert into [dbo].[Photo]
+values ('81so.jpg',48)
+----------------------
+insert into [dbo].[Photo]
+values ('82so.jpg',49)
+----------------------
+insert into [dbo].[Photo]
+values ('83so.jpg',49)
+----------------------
+insert into [dbo].[Photo]
+values ('84so.jpg',49)
+----------------------
+vinsert into [dbo].[Photo]
+values ('85so.jpg',52)
+----------------------
+insert into [dbo].[Photo]
+values ('86so.jpg',52)
+----------------------
+insert into [dbo].[Photo]
+values ('87so.jpg',52)
+----------------------
+insert into [dbo].[Photo]
+values ('19so.jpg',53)
+----------------------
+insert into [dbo].[Photo]
+values ('88so.jpg',53)
+----------------------
+insert into [dbo].[Photo]
+values ('89so.jpg',53)
+----------------------
+insert into [dbo].[Photo]
+values ('90so.jpg',53)
+----------------------
+insert into [dbo].[Photo]
+values ('91so.jpg',56)
+----------------------
+insert into [dbo].[Photo]
+values ('92so.jpg',56)
+----------------------
+insert into [dbo].[Photo]
+values ('93so.jpg',56)
+----------------------
+insert into [dbo].[Photo]
+values ('33p.jpg',64)
+------------------------
+insert into [dbo].[Photo]
+values ('34p.jpg',64)
+------------------------
+insert into [dbo].[Photo]
+values ('35p.jpg',64)
+------------------------
+insert into [dbo].[Photo]
+values ('36p.jpg',64)
+------------------------
+insert into [dbo].[Photo]
+values ('94so.jpg',66)
+------------------------
+insert into [dbo].[Photo]
+values ('95so.jpg',66)
+------------------------
+insert into [dbo].[Photo]
+values ('96so.jpg',66)
+------------------------
+insert into [dbo].[Photo]
+values ('97so.jpg',66)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------

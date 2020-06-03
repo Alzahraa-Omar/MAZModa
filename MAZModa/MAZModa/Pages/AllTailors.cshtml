@@ -1,0 +1,103 @@
+﻿@page
+@model MAZModa.Pages.AllTailorsModel
+@{
+    ViewData["Title"] = "AllTailors";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="page-top-section set-bg" data-setbg="/img/bg/tailor-bg.jpg">
+    <div class="hero-social-warp">
+        <p>Follow us on Social MEdia</p>
+        <div class="hero-social-links">
+            <a href="#"><i class="fa fa-behance"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div>
+</div>
+<br />
+
+
+
+<br />
+<div class="section-title text-center">
+    <span style="font-size:25px">Find Your Tailor</span>
+</div>
+
+
+
+@foreach (var item in Model.Tailors)
+    {
+        <section class="award-section spad">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span></span>
+                    <h2>@item.Name</h2>
+                </div>
+
+                <div class="award-slider owl-carousel">
+                    @foreach (var ph in Model.context.TailorPhoto.Where(ph => ph.TailorId == item.Id).ToList())
+                    {
+                        <div class="award-box" style="height:400px">
+                            <img src="~/img/TailorPhotos/@ph.PhotoPath" style="width:100%;height:100%" />
+                        </div>
+                    }
+                </div>
+                <div style="text-align:center">
+                    @for (int i = 0; i < item.Rate; i++)
+                    {
+                        <span><img src="~/img/star-fill.png" /></span>
+                    }
+                    @for (int i = 0; i < 5 - item.Rate; i++)
+                    {
+                        <span><img src="~/img/star-unfill.png" /></span>
+                    }
+                </div>
+                <span><p style="text-align:center">@item.Location</p></span>
+
+            </div>
+        </section>
+
+    }
+
+
+@*@foreach (var item in Model.Tailors)
+{
+<section class="award-section spad">
+    <div class="container">
+        <div class="section-title text-center">
+            <span>Aenean quis velit pulvinar,</span>
+            <h2>Awards & Nominations</h2>
+        </div>
+        <div class="award-slider owl-carousel">
+            <div class="award-box">
+                <div class="award-year">2011</div>
+                <h4>Fashion AWARDS</h4>
+                <p>Suspendisse rhoncus turpis sed viverra molestie</p>
+            </div>
+            <div class="award-box">
+                <div class="award-year">2012</div>
+                <h4>Fashion magazine AWARDS</h4>
+                <p>Suspendisse rhoncus turpis sed viverra molestie</p>
+            </div>
+            <div class="award-box">
+                <div class="award-year">2015</div>
+                <h4>Fashion AWARDS</h4>
+                <p>Suspendisse rhoncus turpis sed viverra molestie</p>
+            </div>
+            <div class="award-box">
+                <div class="award-year">2017</div>
+                <h4>Fashion magazine AWARDS</h4>
+                <p>Suspendisse rhoncus turpis sed viverra molestie</p>
+            </div>
+            <div class="award-box">
+                <div class="award-year">2017</div>
+                <h4>Fashion magazine AWARDS</h4>
+                <p>Suspendisse rhoncus turpis sed viverra molestie</p>
+            </div>
+        </div>
+    </div>
+</section>
+}*@

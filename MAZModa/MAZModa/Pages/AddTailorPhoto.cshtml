@@ -1,0 +1,48 @@
+﻿@page
+@model MAZModa.Pages.AddTailorPhotoModel
+@{
+    ViewData["Title"] = "AddTailorPhoto";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+    <section class="page-top-section set-bg" data-setbg="img/bg/upload-bg.jpg">
+        <h2>Show Work</h2>
+        <div class="hero-social-warp">
+            <p>Follow us on Social MEdia</p>
+            <div class="hero-social-links">
+                <a href="#"><i class="fa fa-behance"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+    </section>
+
+<br />
+<section class="blog-page">
+    <div class="container">
+
+        <div class="portfolio-slider owl-carousel">
+            @foreach (var item in Model.context.TailorPhoto.ToList())
+            {
+                <a href="#"><img src="~/img/TailorPhotos/@item.PhotoPath" alt="" height="350px" width="150px"></a>
+            }
+
+        </div>
+        <br />
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <lable>Upload photo for new work</lable><br />
+                <input id="pic" name="pic" type="file" class="form-control" multiple />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-dark" value="Upload" />
+            </div>
+        </form>
+    </div>
+</section>
+
